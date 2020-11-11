@@ -1,7 +1,8 @@
 __pycache__
 .idea
 *.xml
-data
+data/*
+!.gitkeep
 test_images_folder
 test_images_result
 *.tar
