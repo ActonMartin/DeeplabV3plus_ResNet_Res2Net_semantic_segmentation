@@ -1,0 +1,8 @@
+__pycache__
+.idea
+*.xml
+data
+test_images_folder
+test_images_result
+*.tar
+runs
