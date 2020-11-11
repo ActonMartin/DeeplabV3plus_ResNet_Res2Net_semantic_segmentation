@@ -233,8 +233,8 @@ class DeepLabv3_plus(nn.Module):
             print("Number of Input Channels: {}".format(nInputChannels))
         super(DeepLabv3_plus, self).__init__()
         # Atrous Conv  首先获得从resnet101中提取的features map
-        # self.resnet_features = ResNet101(nInputChannels, os, pretrained=pretrained)
-        self.resnet_features = res2net50_48w_2s(pretrained=True)
+        self.resnet_features = ResNet101(nInputChannels, os, pretrained=pretrained)
+        # self.resnet_features = res2net50_48w_2s(pretrained=True)
         # ASPP,挑选参数
         if os == 16:
             dilations = [1, 6, 12, 18]

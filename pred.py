@@ -35,15 +35,15 @@ def colorize_mask(mask):
 net = DeepLabv3_plus(
         nInputChannels=3, n_classes=21, os=16, pretrained=True, _print=True).cuda()
 print('Net built.')
-snapshot_path = 'D:/Projects/Models/checkpoint_model_epoch_20.pth.tar'
+snapshot_path = 'D:/Projects/DeeplabV3_ResNet_Res2Net_semantic_segmentation/checkpoint_model_epoch_7.pth_resnet.tar'
 # net= restore_snapshot(net, snapshot=snapshot_path)
 net.load_state_dict(torch.load(snapshot_path))
 net.eval()
 print('Net restored.')
 
 # get data
-data_dir = 'D:/Projects/Models/test_images_folder'
-save_dir = 'D:/Projects/Models/test_images_result'
+data_dir = 'D:/Projects/DeeplabV3_ResNet_Res2Net_semantic_segmentation/test_images_folder'
+save_dir = 'D:/Projects/DeeplabV3_ResNet_Res2Net_semantic_segmentation/test_images_result'
 images = os.listdir(data_dir)
 if len(images) == 0:
     print('There are no images at directory %s. Check the data path.' % (data_dir))

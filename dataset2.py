@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")  # 忽略警告
 
 
 def read_voc_images(
-    root="D:/Projects/Models/data/VOCdevkit/VOC2012", is_train=True, max_num=None
+    root="D:/Projects/DeeplabV3_ResNet_Res2Net_semantic_segmentation/data/VOCdevkit/VOC2012", is_train=True, max_num=None
 ):
     txt_fname = "%s/ImageSets/Segmentation/%s" % (
         root,
